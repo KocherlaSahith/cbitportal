@@ -1,0 +1,36 @@
+<% layout('layouts/eaboilerplate')%>
+<style>
+  body{
+      font-family: 'Times New Roman', Times, serif;
+      height: 100vh;
+        background-image: url('https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80');
+        background-attachment: fixed;
+        background-size: cover;
+        color: white;
+  }
+  </style>
+<form action="/adding_new" method="post">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Event name</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter event name" name="ename">
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Event description</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Event description" name="edesc">
+    </div>
+    <br>
+    
+    <div class="form-group">
+        <label for="exampleInputPassword1">Image URL</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter the image URL" name="eimg">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Hosted by</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Event hosted by" name="ehost">
+      </div>
+      <br>
+    <button type="submit" class="btn btn-primary">Add Event</button>
+  </form>

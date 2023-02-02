@@ -1,0 +1,46 @@
+<style>
+  body{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+<% layout('layouts/lboilerplate')%>
+<div class="row text-center">
+   
+
+   
+
+
+  
+
+    <% for (let campground of lst){%>
+     
+      
+
+    <div class="col">
+
+        <div class="card" style="width: 18rem; margin : 20px;">
+            <img src="<%=campground.eimg%>" class="card-img-top" alt="Fissure in Sandstone"/>
+            <div class="card-body">
+              <h5 class="card-title"  style="text-align: center;float: left;" ><%= campground.ename %> </h5>
+             <button class="card-text"   style="text-align: center; border-radius: 10px; font-size: small;float:right ;" ><%= campground.edesc %></button>  
+               <br>
+            <!-- <a href="#!" class="btn btn-primary">Add</a>--> 
+ 
+             <p class="card-text"   style=" text-align: center; font-size: 69%;"   > Hosted by : <%= campground.ehost %></p>
+
+             <div class="mb-3">
+              <a href="/events" style="float: left; margin-left: 140px; font-size: 48%" class="btn btn-info"> view</a>
+             </div>
+            
+           
+              
+          
+
+
+           
+            </div>
+          </div>
+</div>
+<% }%>

@@ -1,0 +1,25 @@
+<% layout('layouts/lboilerplate')%>
+<style>
+    #box{
+        border: 3px solid white;
+    }
+    body{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:'Times New Roman', Times, serif;
+    color: white;
+  }
+</style>
+<% for (let campground of lst){%>
+    <div id="box">
+    <h2>
+        <form action="/unsend_message/<%= campground._id %>/<%= campground.s_name %>" method="get">
+        <%= campground.message %>
+        <h2>Mentor name :  <%= campground.m_name %></h2>
+        <button class="btn btn-info">Unsend message</button>
+    </div>
+        <br>
+    </h2>
+</form>
+    <% }%>
